@@ -1,0 +1,63 @@
+[user]
+	name = lance bradley
+	email = l@ncebradley.org
+[alias]
+  fs  = !sh -c 'git flow feature start  ${0/sh/} && git push origin -u feature/$0'
+  ff  = !sh -c 'git flow feature finish ${0/sh/} && git push origin   :feature/$0'
+  ff  = !sh -c 'git flow feature finish $0 && git push origin   :feature/$0'
+  d   = diff --patch-with-stat --ignore-space-change
+  dc  = diff --patch-with-stat --ignore-space-change --cached
+  co  = checkout
+  ci  = commit
+  ca  = commit -a
+  st  = status
+  pl  = pull
+  pu  = push
+  br  = branch
+  bd  = branch -D
+  sl  = stash list
+  sh  = stash
+  cp  = cherry-pick
+  la  = log --name-status --date-order
+  lla = log --patch-with-stat --ignore-space-change --date-order
+  l   = log --name-status --date-order --author=lance
+  ll  = log --patch-with-stat --ignore-space-change --date-order --author=lance
+  cl  = !sh -c 'git log --name-status --date-order --author=lance --no-merges --left-right --cherry-pick $0...HEAD'
+  cll = !sh -c 'git log --patch-with-stat --ignore-space-change --date-order --author=lance --no-merges --left-right --cherry-pick $0...HEAD'
+  cr  = !sh -c 'git rev-list --date-order --author=lance --no-merges --left-right --cherry-pick $0...HEAD'
+  pp  = !sh -c 'git pull && git push'
+  sl  = stash list
+  sh  = stash
+  sv  = stash save
+  sl  = stash list
+  sd  = !sh -c 'git stash show --patch-with-stat stash@{${0/sh/0}}'
+  sp  = !sh -c 'git stash pop   stash@{${0/sh/0}}'
+  sa  = !sh -c 'git stash apply stash@{${0/sh/0}}'
+  stash-drop = !sh -c 'git stash drop  stash@{${0/sh/0}}'
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+	ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[core]
+  pager = /usr/bin/less
+	editor = /usr/bin/emacs
+[branch]
+	autosetuprebase = remote
+[help]
+	autocorrect = 1
+[github]
+  user = lancepantz
