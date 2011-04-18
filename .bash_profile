@@ -1,5 +1,4 @@
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH=/opt/local/lib/postgresql83/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:~/bin:/opt/local/lib/postgresql83/bin:/usr/local/bin:/bin$PATH
 export EDITOR=/usr/bin/emacs
 export LD_LIBRARY_PATH=/usr/local/lib
 export SQL_ENV="wg_dev"
@@ -12,7 +11,6 @@ export GIT_ALLOW_SUBMODULE_COMMITS=1
 
 export CLOJURE_EXT=/Users/lance/lib/java
 export GIT_ALLOW_SUBMODULE_COMMITS=1
-export PATH=/usr/local/bin:$PATH:/bin
 
 export CLICOLOR=1
 export LSCOLORS='fa'
